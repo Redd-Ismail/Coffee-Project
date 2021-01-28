@@ -32,12 +32,20 @@ function changeRoast() {
     roastSelection = document.querySelector('#roast-selection');
     updateCoffees();
 }
+// function changeRoastTwo() {
+//     roastSelection = document.querySelector('#roast-selection');
+//     updateCoffeesTwo();
+// }
 
 // Changes the coffee live as the user types. Will essentially grab the value input as the user types
 // and runs// updateCoffes() every letter
 function autofillCoffee() {
     nameInput = document.querySelector('#name-input');
     updateCoffees();
+}
+function autofillCoffeeTwo() {
+    nameInput = document.querySelector('#name-input');
+    updateCoffeesTwo();
 }
 
 
@@ -81,8 +89,8 @@ function updateCoffees() {
     divCoffee.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function updateCoffeesTwo(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+function updateCoffeesTwo() {
+   // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoastTwo = roastSelectionTwo.value;
     var selectedNameTwo = nameInputTwo.value;
     var filteredCoffees = [];
