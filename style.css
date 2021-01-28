@@ -11,3 +11,10 @@ div #coffee {
     display: flex;
     justify-content: space-between;
 }
+header,
+div #coffee,
+section {
+    background: white;
+    /*font-size: x-small;*/
+    padding: 5px;
+}
