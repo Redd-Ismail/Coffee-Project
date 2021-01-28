@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<div class="wrapper">
+    <header>
+        <h1>Coffee!</h1>
+        <hr>
+    </header>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <section>
+        <form class="card">
 
-    <script src="main.js"></script>
+            <p>
+                <label for="roast-selection">Roast</label>
+            </p>
+            <select id="roast-selection" onchange="changeRoast()">
+                <option selected>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+
+            <p><label for="name-input">Coffee Name</label></p>
+            <input id="name-input" type="text" name="name-input" oninput="autofillCoffee()">
+
+
+        </form>
+
+
+        <form class="card">
+            <br>
+            <hr>
+
+            <h1> Add a Coffee </h1>
+            <p>
+                <label for="roast-selection-two">Roast</label>
+            </p>
+            <select id="roast-selection-two">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+
+            <p><label for="name-input-two">Coffee Name</label></p>
+            <input id="name-input-two" type="text" name="name-input-two">
+            <button id="submit" type="button">Submit</button>
+
+        </form>
+
+
+    </section>
+
+    <main>
+        <div id="coffees"></div>
+    </main>
+
+</div>
+<script src="main.js"></script>
 </body>
 </html>
