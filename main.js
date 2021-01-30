@@ -33,7 +33,7 @@ function changeRoast() {
     updateCoffees();
 }
 // function changeRoastTwo() {
-//     roastSelection = document.querySelector('#roast-selection');
+//     roastSelectionTwo = document.querySelector('#roast-selection');
 //     updateCoffeesTwo();
 // }
 
